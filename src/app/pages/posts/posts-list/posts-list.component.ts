@@ -14,6 +14,7 @@ import { DeleteConfirmationModalComponent } from '../../../shared/delete-confirm
 import { UserFilterModalComponent } from './user-filter-modal/user-filter-modal.component';
 import { CommonModule } from '@angular/common';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-posts-list',
@@ -40,7 +41,11 @@ export class PostsListComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor(private postsService: PostsService, private dialog: MatDialog) {}
+  constructor(
+    private postsService: PostsService,
+    private dialog: MatDialog,
+    private toastr: ToastrService
+  ) {}
 
   ngOnInit(): void {
     this.getPosts();
@@ -93,9 +98,11 @@ export class PostsListComponent implements OnInit {
         this.postsService.deletePost(result).subscribe({
           next: () => {
             this.getPosts();
+            this.toastr.success('Post deleted Successfully');
           },
           error: (error) => {
             console.log('failed to delete post', error);
+            this.toastr.error('Faild to delete post', 'Error');
           },
         });
       }
