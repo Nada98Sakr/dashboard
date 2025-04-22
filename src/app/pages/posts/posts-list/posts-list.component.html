@@ -98,6 +98,7 @@
               <button
                 class="table__actions__button"
                 (click)="openDeleteDialog()"
+                [disabled]="isDeleting"
               >
                 <img src="assets/icons/bin.svg" alt="delete" />
               </button>

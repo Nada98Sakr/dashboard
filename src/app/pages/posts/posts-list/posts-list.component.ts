@@ -35,6 +35,7 @@ export class PostsListComponent implements OnInit {
   page = 1;
   limit = 10;
   isLoading = false;
+  isDeleting = false;
   posts: Post[] = [];
   selectedUserId?: number;
   displayedColumns: string[] = ['id', 'userId', 'title', 'body', 'actions'];
@@ -95,14 +96,17 @@ export class PostsListComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
+        this.isDeleting = true;
         this.postsService.deletePost(result).subscribe({
           next: () => {
             this.getPosts();
             this.toastr.success('Post deleted Successfully');
+            this.isDeleting = false;
           },
           error: (error) => {
             console.log('failed to delete post', error);
             this.toastr.error('Faild to delete post', 'Error');
+            this.isDeleting = false;
           },
         });
       }
