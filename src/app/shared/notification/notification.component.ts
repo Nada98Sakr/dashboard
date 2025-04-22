@@ -5,8 +5,8 @@ import { WebSocketService } from '../../core/services/websocket.service';
 @Component({
   selector: 'app-notification',
   template: `
-    <button class="fixed bottom-6 end-6 z-50 cursor-pointer" (click)="sendMessage()">
-        <img src="assets/icons/customer-service-support-svgrepo-com.svg" alt="Support" width="60" height="60">
+    <button class="fixed bottom-20 end-6 z-50 cursor-pointer" (click)="sendMessage()">
+        <img src="assets/icons/customer-service-support-svgrepo-com.svg" alt="Support" width="50" height="50">
     </button>
   `,
 })
