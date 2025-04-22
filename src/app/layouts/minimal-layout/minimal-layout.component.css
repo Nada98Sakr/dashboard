@@ -1,0 +1,19 @@
+.minimal-layout {
+    background-color: #4880FF;
+    background-image: url('/assets/images/bg-shapes.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.minimal-layout__content {
+    background-color: white;
+    padding: 3.5rem 3.75rem;
+    max-width: 630px;
+    border-radius: 1.5rem;
+}

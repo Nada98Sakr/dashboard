@@ -1,0 +1,23 @@
+<div class="bg-white p-6 rounded-xl shadow-xs">
+  <p class="text-[22px] font-bold text-[var(--text-color)]">
+    {{ "DASHBOARD.ANALYTICS.CUSTOMER_ANALYTICS" | translate }}
+  </p>
+  <div class="flex justify-center items-center">
+    <div class="relative h-52 mt-9">
+      <canvas
+        baseChart
+        [data]="doughnutChartData"
+        [type]="'doughnut'"
+        [options]="doughnutChartOptions"
+      >
+      </canvas>
+
+      <span
+        class="absolute top-1/2 left-[33%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center text-[22px] font-bold text-[var(--text-color)]"
+      >
+        <span>{{ total }}</span>
+        <span>Total</span>
+      </span>
+    </div>
+  </div>
+</div>

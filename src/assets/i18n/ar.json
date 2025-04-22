@@ -1,0 +1,78 @@
+{
+  "LANG": {
+    "AR": "العربية",
+    "EN": "الإنجليزية"
+  },
+  "GENERAL": {
+    "DELETE": "حذف",
+    "CANCEL": "إلغاء",
+    "SAVE": "حفظ",
+    "EDIT": "تعديل",
+    "ADD": "إضافة",
+    "SEARCH": "بحث",
+    "FILTER_BY": "تصفية حسب",
+    "RESET_FILTER": "إعادة تعيين الفلتر",
+    "APPLY_NOW": "تطبيق الآن",
+    "NO_DATA": "لا توجد بيانات",
+    "DELETE_CONFIRMATION": "هل أنت متأكد أنك تريد حذف هذا العنصر؟",
+    "REQUIRED_FIELD": "{{name}} مطلوب",
+    "INVALID_FIELD": "غير صالح {{name}}",
+    "ACTIONS": "الإجراءات"
+  },
+  "LOGIN": {
+    "TITLE": "تسجيل الدخول",
+    "SUBTITLE": "يرجى إدخال بريدك الإلكتروني وكلمة المرور للمتابعة",
+    "EMAIL": "عنوان البريد الإلكتروني",
+    "ENTER_EMAIL": "أدخل عنوان بريدك الإلكتروني",
+    "PASSWORD": "كلمة المرور",
+    "ENTER_PASSWORD": "أدخل كلمة المرور",
+    "FORGET_PASSWORD": "هل نسيت كلمة المرور؟",
+    "REMEMBER_PASSWORD": "تذكر كلمة المرور",
+    "SIGN_IN": "تسجيل الدخول",
+    "DONT_HAVE_ACCOUNT": "ليس لديك حساب؟",
+    "CREATE_ACCOUNT": "إنشاء حساب",
+    "ERROR_MESSAGE": "البريد الإلكتروني أو كلمة المرور غير صحيحة"
+  },
+  "ERROR": {
+    "TEXT": "يبدو أنك ضيعت الطريق....",
+    "BUTTON_TEXT": "العودة إلى لوحة القيادة"
+  },
+  "SIDEBAR": {
+    "LOGOUT": "تسجيل الخروج",
+    "DASHBOARD": "لوحة التحكم",
+    "POSTS_LISTS": "قوائم المنشورات"
+  },
+  "DASHBOARD": {
+    "TITLE": "لوحة التحكم",
+    "STATISTICS": {
+      "TOTAL_USERS": "إجمالي المستخدمين",
+      "TOTAL_ORDERS": "إجمالي الطلبات",
+      "TOTAL_PENDING": "إجمالي المعلق",
+      "TOTAL_SALES": "إجمالي المبيعات",
+      "UP_FROM_YESTERDAY": "زيادة عن الأمس",
+      "DOWN_FROM_YESTERDAY": "انخفاض عن الأمس"
+    },
+    "ANALYTICS": {
+      "CUSTOMER_ANALYTICS": "تحليلات العملاء",
+      "OPTIMISTIC": "متفائل",
+      "PESSIMISTIC": "متشائم",
+      "UNSURE": "غير متأكد",
+      "SALES_ANALYTICS": "تحليلات المبيعات"
+    }
+  },
+  "POSTS": {
+    "POSTS_LIST": "قوائم المنشورات",
+    "ADD_POST": "إضافة منشور",
+    "EDIT_POST": "تعديل المنشور",
+    "SELECT_USER_ID": "اختر معرف المستخدم",
+    "POST_FROM": {
+      "ID": "المعرف",
+      "TITLE": "العنوان",
+      "ADD_TITLE": "إضافة عنوان",
+      "BODY": "المحتوى",
+      "ADD_BODY": "إضافة محتوى",
+      "USER_ID": "معرف المستخدم",
+      "ADD_USER_ID": "إضافة معرف المستخدم الخاص بك"
+    }
+  }
+}

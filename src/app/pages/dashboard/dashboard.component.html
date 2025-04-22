@@ -1,0 +1,23 @@
+<div class="page">
+  <div class="page__heading">
+    <h1 class="page__title">{{ "DASHBOARD.TITLE" | translate }}</h1>
+  </div>
+
+  <div class="page__content">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7.5 mb-6 items-stretch">
+      <app-statistic-card
+        *ngFor="let stat of dashboardStatistics"
+        [statistic]="stat"
+      />
+    </div>
+
+    <div class="mb-6">
+      <app-sales-details-chart></app-sales-details-chart>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-7.5">
+      <app-customer-analytics-chart></app-customer-analytics-chart>
+      <app-sales-analytics-chart></app-sales-analytics-chart>
+    </div>
+  </div>
+</div>

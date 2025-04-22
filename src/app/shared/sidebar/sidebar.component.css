@@ -1,0 +1,129 @@
+.sidebar {
+  width: 240px;
+  height: 100%;
+  background-color: white;
+  transition: transform 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.sidebar.en {
+  left: 0;
+  border-right: 1px solid #ccc;
+  transform: translateX(-100%);
+}
+
+.sidebar.ar {
+  right: 0;
+  border-left: 1px solid #ccc;
+  transform: translateX(100%);
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    transform: translateX(0) !important;
+  }
+
+  .sidebar__toggle {
+    display: none;
+  }
+}
+
+.sidebar .sidebar__logo {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+}
+
+.sidebar__navlist {
+  padding: 1.75rem 0;
+}
+
+.sidebar__navlist .sidebar__navlist__item {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.sidebar__navlist__item.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 9px;
+  background-color: var(--main-color);
+  border-radius: 4px;
+}
+
+.sidebar.en .sidebar__navlist__item.active::before {
+  left: -5px;
+  right: auto;
+}
+
+.sidebar.ar .sidebar__navlist__item.active::before {
+  right: -5px;
+  left: auto;
+}
+
+.sidebar__navlist__item .sidebar__navlist__item__link {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin: 0 1.5rem;
+  flex: 1;
+  padding: 15px;
+  color: var(--text-color);
+}
+
+.sidebar__navlist__item.active .sidebar__navlist__item__link {
+  color: white;
+  background-color: var(--main-color);
+  border-radius: 6px;
+}
+
+.sidebar__toggle {
+  position: fixed;
+  top: 1.3rem;
+  left: 1rem;
+  z-index: 1000;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.sidebar__toggle.en {
+  left: 1rem;
+  right: auto;
+}
+
+.sidebar__toggle.ar {
+  right: 1rem;
+  left: auto;
+}
+
+.sidebar-backdrop {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar-backdrop.show {
+  opacity: 1;
+  pointer-events: all;
+}

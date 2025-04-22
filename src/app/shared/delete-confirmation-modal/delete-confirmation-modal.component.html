@@ -1,0 +1,14 @@
+<div class="px-10 py-12 relative">
+    <button class="absolute top-4 right-5 text-xl text-[#B6B6B6] cursor-pointer" mat-dialog-close>
+      &times;
+    </button>
+    <div class="flex items-start gap-2 mb-12 text-xl">
+        <img src="assets/icons/Vector.svg" alt="!">
+        {{'GENERAL.DELETE_CONFIRMATION' | translate}}
+    </div>
+    
+    <div class="flex justify-center gap-4 px-14">
+      <button class="button button__secondary w-full" mat-dialog-close>{{'GENERAL.CANCEL' | translate}}</button>
+      <button class="button button__primary w-full" [mat-dialog-close]="true">{{'GENERAL.DELETE' | translate}}</button>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<div 
+  class="sidebar-backdrop" 
+  [class.show]="isSidebarOpen" 
+  (click)="toggleSidebar()"
+></div>
+
+<button class="sidebar__toggle -mt-1" [ngClass]="lang" (click)="toggleSidebar()">
+  ☰
+</button>
+
+<aside class="sidebar" [ngClass]="lang" [class.open]="isSidebarOpen">
+  <button class="sidebar__toggle" [ngClass]="lang"
+   (click)="toggleSidebar()" *ngIf="isSidebarOpen">
+    ☰
+  </button>
+
+  <a routerLink="/dashboard" class="sidebar__logo">
+    <img src="assets/images/Logo.svg" alt="XonTel Dash"
+  /></a>
+  <ul class="sidebar__navlist">
+    <li
+      *ngFor="let item of sidebarItems; let i = index"
+      class="sidebar__navlist__item"
+      [routerLinkActive]="'active'"
+    >
+      <a
+        [routerLink]="[item.link]"
+        class="sidebar__navlist__item__link"
+      >
+        <span>{{ item.key | translate }}</span>
+      </a>
+    </li>
+
+    <li class="sidebar__navlist__item mt-4 border-t border-[var(--border-color)]">
+      <a
+        [routerLink]="['/login']"
+        (click)="logout()"
+        class="sidebar__navlist__item__link "
+      >
+        <span>{{ "SIDEBAR.LOGOUT" | translate }}</span>
+      </a>
+    </li>
+  </ul>
+</aside>

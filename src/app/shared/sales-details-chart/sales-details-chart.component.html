@@ -1,0 +1,14 @@
+<div class="bg-white p-6 rounded-xl shadow-xs">
+  <p class="text-[22px] font-bold text-[var(--text-color)]">
+    {{ "DASHBOARD.ANALYTICS.SALES_ANALYTICS" | translate }}
+  </p>
+  <div class="flex justify-center items-center w-full md:w-10/12 mt-9 mx-auto">
+    <canvas
+      baseChart
+      [data]="barChartData"
+      [options]="barChartOptions"
+      [type]="barChartType"
+    >
+    </canvas>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="bg-white p-4 rounded-xl shadow-xs">
+    <div class="flex justify-between w-full mb-[29px]">
+        <div>
+            <h4 class="text-base font-semibold text-[var(--text-gray)] mb-4">{{ statistic.title | translate }}</h4>
+            <h2 class="text-[28px] font-bold text-[var(--text-color)]">{{ statistic.value }}</h2>
+        </div>
+        <div>
+            <img [src]="statistic.icon" [alt]="statistic.title | translate" width="60" height="60" />
+        </div>
+    </div>
+
+    <h6 class="flex items-center text-base font-semibold text-[var(--text-gray)]">
+        <img *ngIf="statistic.change > 0" src="assets/icons/ic-trending-up-24px.svg" alt="Up Arrow" />
+        <img *ngIf="statistic.change < 0" src="assets/icons/ic-trending-down-24px.svg" alt="Down Arrow" />
+        <span class="ml-2 {{
+        statistic.change > 0 ? 'text-[#00B69B]' : 'text-[#F93C65]'
+      }}">{{ statistic.change }}%
+        </span>
+        &nbsp;{{ statistic.subtitle | translate}}
+    </h6>
+</div>

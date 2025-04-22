@@ -1,0 +1,78 @@
+{
+  "LANG": {
+    "AR": "Arabic",
+    "EN": "English"
+  },
+  "GENERAL": {
+    "DELETE": "Delete",
+    "CANCEL": "Cancel",
+    "SAVE": "Save",
+    "EDIT": "Edit",
+    "ADD": "Add",
+    "SEARCH": "Search",
+    "FILTER_BY": "Filter By",
+    "RESET_FILTER": "Reset Filter",
+    "APPLY_NOW": "Apply Now",
+    "NO_DATA": "No Data Found",
+    "DELETE_CONFIRMATION": "Are you sure you want to delete this item?",
+    "REQUIRED_FIELD": "{{name}} is required",
+    "INVALID_FIELD": "Invalid {{name}}",
+    "ACTIONS": "Actions"
+  },
+  "LOGIN": {
+    "TITLE": "Login to Account",
+    "SUBTITLE": "Please enter your email and password to continue",
+    "EMAIL": "Email address",
+    "ENTER_EMAIL": "Enter your email address",
+    "PASSWORD": "Password",
+    "ENTER_PASSWORD": "Enter your password",
+    "FORGET_PASSWORD": "Forget Password?",
+    "REMEMBER_PASSWORD": "Remember Password",
+    "SIGN_IN": "Sign In",
+    "DONT_HAVE_ACCOUNT": "Don't have an account?",
+    "CREATE_ACCOUNT": "Create Account",
+    "ERROR_MESSAGE": "Invalid email or password"
+  },
+  "ERROR": {
+    "TEXT": "Looks like you’ve got lost….",
+    "BUTTON_TEXT": "Back to Dashboard"
+  },
+  "SIDEBAR": {
+    "LOGOUT": "Logout",
+    "DASHBOARD": "Dashboard",
+    "POSTS_LISTS": "Posts Lists"
+  },
+  "DASHBOARD": {
+    "TITLE": "Dashboard",
+    "STATISTICS": {
+      "TOTAL_USERS": "Total Users",
+      "TOTAL_ORDERS": "Total Orders",
+      "TOTAL_PENDING": "Total Pending",
+      "TOTAL_SALES": "Total Sales",
+      "UP_FROM_YESTERDAY": "Up from yesterday",
+      "DOWN_FROM_YESTERDAY": "Down from yesterday"
+    },
+    "ANALYTICS": {
+      "CUSTOMER_ANALYTICS": "Customer Analytics",
+      "OPTIMISTIC": "Optimistic",
+      "PESSIMISTIC": "Pessimistic",
+      "UNSURE": "Unsure",
+      "SALES_ANALYTICS": "Sales Analytics"
+    }
+  },
+  "POSTS": {
+    "POSTS_LIST": "Posts Lists",
+    "ADD_POST": "Add Post",
+    "EDIT_POST": "Edit Post",
+    "SELECT_USER_ID": "Select User ID",
+    "POST_FROM": {
+      "ID": "ID",
+      "TITLE": "Title",
+      "ADD_TITLE": "Add Title",
+      "BODY": "Body",
+      "ADD_BODY": "Add Body",
+      "USER_ID": "User ID",
+      "ADD_USER_ID": "Add Your User ID"
+    }
+  }
+}

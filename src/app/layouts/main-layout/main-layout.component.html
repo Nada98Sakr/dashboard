@@ -1,0 +1,10 @@
+<div class="flex h-screen ">
+  <app-sidebar></app-sidebar>
+  <main class="flex-grow md:ms-[240px] flex flex-col relative pt-[70px]">
+    <app-notification></app-notification>
+    <app-navbar></app-navbar>
+    <div class="p-4 sm:p-[30px] bg-[var(--main-bg-color)] flex-grow">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>

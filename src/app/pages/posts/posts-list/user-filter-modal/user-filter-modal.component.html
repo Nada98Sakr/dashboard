@@ -1,0 +1,24 @@
+<div class="bg-white sm:w-sm">
+  <div class="px-8 py-6">
+    <h2 class="font-bold text-lg">{{ "POSTS.SELECT_USER_ID" | translate }}</h2>
+  </div>
+
+  <div class="px-8 py-6 border-t border-b">
+    <input
+      type="number"
+      min="1"
+      [(ngModel)]="selectedUserId"
+      [placeholder]="'GENERAL.SEARCH' | translate"
+      class="form-group__input !bg-[#F5F6FA] !border-[#6B6B6B]"
+    />
+  </div>
+
+  <div class="flex justify-center gap-4 px-14 py-6">
+    <button
+      class="button button__primary !px-8 !py-2"
+      [mat-dialog-close]="selectedUserId"
+    >
+      {{ "GENERAL.APPLY_NOW" | translate }}
+    </button>
+  </div>
+</div>

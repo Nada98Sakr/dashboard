@@ -1,0 +1,105 @@
+<div class="page">
+  <div class="page__heading">
+    <h1 class="page__title flex">
+      <a [routerLink]="'/posts'">{{ "POSTS.POSTS_LIST" | translate }}</a>
+      <img
+        src="assets/icons/ic-arrow-right-48px.svg"
+        alt=">"
+        class="mx-2"
+      />
+      <span class="font-normal">
+        {{
+          isEditMode
+            ? ("POSTS.EDIT_POST" | translate)
+            : ("POSTS.ADD_POST" | translate)
+        }}
+      </span>
+    </h1>
+  </div>
+
+  <div class="page__content">
+    <form #form="ngForm" class="lg:w-2xl" (ngSubmit)="savePost(form)">
+      <div class="form-group mb-6">
+        <label class="form-group__label" for="title">{{
+          "POSTS.POST_FROM.TITLE" | translate
+        }}</label>
+        <input
+          id="title"
+          name="title"
+          [(ngModel)]="post.title"
+          #titleModel="ngModel"
+          type="title"
+          [placeholder]="'POSTS.POST_FROM.ADD_TITLE' | translate"
+          required
+          class="form-group__input"
+        />
+
+        <div *ngIf="isSubmitting" class="error">
+          <div *ngIf="hasError(titleModel, 'required')">
+            {{
+              "GENERAL.REQUIRED_FIELD"
+                | translate : { name: "POSTS.POST_FROM.TITLE" | translate }
+            }}
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group mb-6">
+        <label class="form-group__label" for="body">{{
+          "POSTS.POST_FROM.BODY" | translate
+        }}</label>
+        <textarea
+          id="body"
+          name="body"
+          [(ngModel)]="post.body"
+          #bodyModel="ngModel"
+          type="text"
+          [placeholder]="'POSTS.POST_FROM.ADD_BODY' | translate"
+          required
+          class="form-group__input"
+          rows="5"
+        ></textarea>
+
+        <div *ngIf="isSubmitting" class="error">
+          <div *ngIf="hasError(bodyModel, 'required')">
+            {{
+              "GENERAL.REQUIRED_FIELD"
+                | translate : { name: "POSTS.POST_FROM.BODY" | translate }
+            }}
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group mb-6">
+        <label class="form-group__label" for="userId">{{
+          "POSTS.POST_FROM.USER_ID" | translate
+        }}</label>
+        <ng-select
+          [items]="users"
+          bindLabel="id"
+          bindValue="id"
+          name="userId"
+          id="userId"
+          #userIdModel="ngModel"
+          [(ngModel)]="post.userId"
+          [placeholder]="'POSTS.POST_FROM.USER_ID' | translate"
+          required
+        >
+        </ng-select>
+
+        <div *ngIf="isSubmitting" class="error">
+          <div *ngIf="hasError(userIdModel, 'required')">
+            {{
+              "GENERAL.REQUIRED_FIELD"
+                | translate : { name: "POSTS.POST_FROM.USER_ID" | translate }
+            }}
+          </div>
+        </div>
+      </div>
+
+      <button class="button button__primary !px-28" type="submit" [disabled]="isSubmitting">
+        {{ "GENERAL.SAVE" | translate }}
+      </button>
+    </form>
+  </div>
+</div>
